@@ -4,17 +4,18 @@
     <div class="accordion" id="sidebar-accordion">
         <div class="card sidebar-card">
         {{ range (where .Site.Pages "Type" "product") }}
-        <div class="card-header" id="heading{{.File.UniqueID}}">
-            <h2 class="mb-0">
-                <button class="btn btn-link sidebar-button" type="button" data-toggle="collapse" data-target="#collapse{{.File.UniqueID}}" aria-expanded="true" aria-controls="collapse{{.File.UniqueID}}">
-                    <h3 class="sidebar-h1">{{ .Title }}</h3>
-                </button>
-            </h2>
-        </div>
+            <div class="card-header" id="heading{{.File.UniqueID}}">
+                <h2 class="mb-0">
+                    <button class="btn btn-link sidebar-button" type="button" data-toggle="collapse" data-target="#collapse{{.File.UniqueID}}" aria-expanded="true" aria-controls="collapse{{.File.UniqueID}}">
+                        <h3 class="sidebar-h1">{{ .Title }}</h3>
+                    </button>
+                </h2>
+            </div>
 
-        <div id="collapse{{.File.UniqueID}}" class="collapse" aria-labelledby="#heading{{.File.UniqueID}}" data-parent="#sidebar-accordion">
-            <div class="card-body">
-                
+            <div id="collapse{{.File.UniqueID}}" class="collapse" aria-labelledby="#heading{{.File.UniqueID}}" data-parent="#sidebar-accordion">
+                <div class="card-body">
+                    
+                </div>
             </div>
         </div>
         {{ end }}
