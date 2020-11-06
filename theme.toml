@@ -1,15 +1,16 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Dot"
-license = "MIT Licence"
-licenselink = "https://github.com/themefisher/dot/blob/master/LICENSE"
-description = "Dot, A documentation theme powered by hugo"
-homepage = "https://gethugothemes.com/products/hugo-documentation-theme/"
-tags = ["documentation", "bootstrap", "light", "minimal", "clean", "simple", "fast", "modern", "white", "customizable", "creative", "flexbox","minimalistic","Highlight.js","typography", "docs", "material design", "highlighting", "contact form", "responsive", "Syntax highlighting", "Multilingual", "Single page", "Themefisher"]
-features = ["responsive","search autocomplete", "color scheme"]
-min_version = "0.64.0"
+name = "Clyde"
+license = "MIT"
+licenselink = "https://github.com/gewenyu99/clyde/blob/master/LICENSE"
+description = ""
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.41.0"
 
 [author]
-  name = "Themefisher"
-  homepage = "https://themefisher.com"
+  name = "Wen Yu Ge"
+  homepage = "https://github.com/gewenyu99/clyde"
+
