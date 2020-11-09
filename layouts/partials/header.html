@@ -1,37 +1,38 @@
 <div class="sidebar">
     {{ $logo:= site.Params.logo }}
     <img class="img-fluid" src="{{ $logo | absURL }}" alt="{{ site.Title }}">
-    <div class="accordion" id="sidebar-accordion">
-        <div class="card sidebar-card">
-        {{ range (where .Site.Pages "Type" "product") }}
-            <div class="card-header" id="heading{{.File.UniqueID}}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link sidebar-button" type="button" data-toggle="collapse" data-target="#collapse{{.File.UniqueID}}" aria-expanded="true" aria-controls="collapse{{.File.UniqueID}}">
-                        <h3 class="sidebar-h1">{{ .Title }}</h3>
-                    </button>
-                </h2>
-            </div>
 
-            <div id="collapse{{.File.UniqueID}}" class="collapse" aria-labelledby="#heading{{.File.UniqueID}}" data-parent="#sidebar-accordion">
-                <div class="card-body">
-                    
-                </div>
-            </div>
-        </div>
-        {{ end }}
-    </div>
+    <input id="search-input" type="text" placeholder="" name="search">
+
+    <section id="search-results" class="search"></section>
+    <br></br>
+
+
+    {{ template "nav_item" .}}
 </div>
 
-<!-- stuff
-    <nav id="nav" class="nav justify-content-center">
-        {{ range .Site.Menus.main }}
-        <a class="nav-link" href="{{ .URL }}">
-        {{ if .Pre }}
-        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-        {{ $icon }}
-        {{ end }}
-        {{ $text := print .Name | safeHTML }}
-        {{ $text }}
+{{ define "nav_item" }}
+{{ $curSection := .Section}}
+{{ $curUID := .File.UniqueID }}
+{{ $curPage := .}}
+
+<div class="card sidebar-card">
+{{ range (where .Site.Pages "Type" "product") }}
+    <div class="collapse-header">
+        <a class="nav-link" href="{{.Permalink}}"> 
+            <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}highlight{{end}}">{{ .Title }}</h3>
         </a>
-        {{ end }}
-    </nav> -->
+    </div>
+    
+    <div class="collapse {{if $curPage.IsDescendant . }}show{{end}}">
+        <div class="nav-list">
+            {{ range .Pages }}
+                <a class="nav-link" href="{{.Permalink}}"> 
+                    <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}highlight{{end}}">{{ .Title }}</h3>
+                </a>
+            {{ end }}                
+        </div>
+    </div>
+{{ end }}
+</div>
+{{ end }}

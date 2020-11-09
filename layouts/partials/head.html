@@ -13,6 +13,8 @@
             --white: #ffffff;
             --primary: {{ .Site.Params.primary }};
             --secondary: {{ .Site.Params.secondary }};
+            --accent: {{ .Site.Params.accent }};
+            --nav-highlight: {{ .Site.Params.nav_highlight }};
         }
     </style>
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
