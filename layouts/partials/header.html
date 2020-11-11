@@ -1,34 +1,8 @@
 <div class="sidebar">
     {{ $logo:= site.Params.logo }}
     <a href="{{.Site.Home.Permalink}}" >
-        <img class="img-fluid" src="{{ $logo | absURL }}" alt="{{ site.Title }}"> 
+        <img id="logo" src="{{ $logo | absURL }}" alt="{{ site.Title }}"> 
     </a>
-
-    
-    <button class="search-button" data-toggle="modal" data-target="#search-input-modal" onclick='setFocusToTextBox()'>
-        <h3 class="sidebar-h1">
-            <i class="icon-search navicon"></i>
-            Find anything
-        </h3>
-    </button>
-
-    <div class="modal fade search" id="search-input-modal">
-        <div id="search-input-modal" class="modal-dialog">
-            <div id="search-input-div" class="modal-content">
-                <input id="search-input" type="text" placeholder="" name="search">
-                <div class="h-div search"></div>
-                <span class="focus-border"></span>
-                <section id="search-results" class="search"></section>
-                <div id="search-footer">
-                    <i class="icon-search navicon"></i> Search Documentation...
-                </div>
-            </div>
-        </div>
-    </div>
-   
-
-    <div class="h-div"></div>
-
 
     {{ template "nav_item" .}}
 </div>
@@ -42,7 +16,7 @@
 {{ range (where .Site.Pages "Type" "product") }}
     <div class="collapse-header">
         <a class="nav-link" href="{{.Permalink}}"> 
-            <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}highlight{{end}}" 
+            <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} mainitem" 
             id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
                 <i class="{{ .Params.Icon }} navicon"></i>
                 {{ .Title }}
@@ -54,7 +28,7 @@
         <div class="nav-list">
             {{ range .Pages }}
                 <a class="nav-link" href="{{.Permalink}}"> 
-                    <h3 class="sidebar-h2 {{if eq $curUID .File.UniqueID}}highlight{{end}}" 
+                    <h3 class="sidebar-h2 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} subitem" 
                     id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
                         {{ .Title }}
                     </h3>

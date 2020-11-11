@@ -1,14 +1,15 @@
 .content {
-    padding: 72px;
+    padding: 0px;
     margin: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    overflow-y: scroll;
+    justify-content: stretch;
+    font-size: 14;
 }
 
 .text-area{
-    padding: 0px;
+    overflow-y: scroll;
+    padding: 32px 72px;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -29,35 +30,40 @@
     flex: 1 1 0px;
     padding-right: 36px;
     min-width: 300px;
-
 }
 
 .example-area {
+    margin-top: 72px;
+    margin-bottom: 72px;
     padding-left: 36px;
-    flex: 1 1 0px;
     z-index: 1;
-    max-height: inherit;
-
-}
-
-.content-area.single-row {
-
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: flex-start;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    flex: 1 1 0px;
+    min-width: 300px;
 }
 
 .highlight{
+    border: 0px;
     padding: 16px;
     background-color: var(--secondary);
+    max-height: 50vh;
+    overflow: auto;
+    width: inherit;
 }
 
 .example{
-    margin-top:  36px;
-    margin-bottom:  36px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2rem;
-    bottom: 2rem;
+    top: 0px;
+    bottom: 0px;
     max-height: inherit;
     background-color: var(--secondary);
+    max-height: 70vh;
+    min-width: 300px;
+    width: inherit;
 }
 
 .scroll{

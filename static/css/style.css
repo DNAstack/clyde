@@ -87,30 +87,3 @@ p {
     margin: 0;
 }
 
-.navicon {
-    font-size: 18px;
-    margin-right: 16px;
-}  
-
-.nav-list{
-    padding-left: 20px; 
-}
-.nav-link{
-    margin-left: 0px; 
-    padding: 0px 0px !important;
-    display: flex;
-    flex-direction: row;
-}
-.nav-collapse{
-    display: none;
-}
-.nav-collapse.show{
-    display: block;
-}
-
-.highlight{
-    /* border-right: 5px solid var(--accent); */
-    background-color: var(--nav-highlight);
-    color: var(--primary) !important;
-}
-

@@ -11,7 +11,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    padding: 8px 16px 8px 16px !important;
+    padding: 12px 24px 12px 24px !important;
     margin: 0px;
     color: #969DAC;
     overflow-y: auto;
@@ -23,15 +23,16 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
-    padding: 8px 16px 8px 27px !important;
+    padding: 8px 16px 8px 15px !important;
+    margin-left: 15px !important;
     margin: 0px;
     color: #969DAC;
     overflow-y: auto;
 }
 
 .sidebar {
-    width: 225px;
     min-width: 225px;
+    max-width: 225px;
     margin: 0;
     background-color: var(--secondary);
     color: var(--primary);
@@ -54,3 +55,51 @@
     width: inherit;
     height: inherit;
 }
+
+.navicon {
+    font-size: 22px;
+    margin-right: 16px;
+}  
+
+.nav-list{
+    padding-left: 20px; 
+}
+.nav-link{
+    margin-left: 0px; 
+    padding: 0px 0px !important;
+    display: flex;
+    flex-direction: row;
+}
+.nav-collapse{
+    display: none;
+}
+.nav-collapse.show{
+    display: block;
+}
+
+#logo{
+    margin-top: 24px;
+    margin-left: 24px;
+    height: 32px;
+    margin-bottom: 44px;
+}
+
+
+.nav-highlight{
+    color: var(--primary) !important;
+    
+}
+
+.nav-highlight.mainitem{
+    background-color: var(--nav-highlight);
+}
+
+
+.sidebar-h2.nav-highlight.subitem{
+    border-left: 1px solid var(--accent);
+}
+
+.sidebar-h2.subitem{
+    border-left: 1px solid var(--primary);
+}
+
