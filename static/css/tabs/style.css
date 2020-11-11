@@ -1,0 +1,30 @@
+.nav.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  border-bottom: none;
+}
+
+pre{
+  background-color: var(--secondary);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+  padding: 4px 8px !important;
+  flex: 1;
+  max-width: 75px;
+  text-align: center;
+  background-color: var(--secondary) !important;
+  color: var(--grey600) !important;
+  border: none !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover{
+  border: none;
+  color: var(--primary) !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.content-tab.active{
+  background-color: var(--secondary);
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--accent) !important;
+}

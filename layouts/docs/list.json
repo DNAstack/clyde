@@ -1,0 +1,19 @@
+[
+    {{ range $index, $value := where .Site.Pages "Type" "product" }}
+    {{ if $index }}, {{ end }}
+    {
+        "url": "{{ .RelPermalink }}",
+        "title": "{{ .Title }}",
+        "content": {{ .Content | plainify | jsonify }}
+    }
+    {{ end }}
+    ,
+    {{ range $index, $value := where .Site.Pages "Type" "docs" }}
+    {{ if $index }}, {{ end }}
+    {
+        "url": "{{ .RelPermalink }}",
+        "title": "{{ .Title }}",
+        "content": {{ .Content | plainify | jsonify }}
+    }
+    {{ end }}
+]

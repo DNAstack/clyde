@@ -2,11 +2,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/search/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/sidebar/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/content/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/content/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/tabs/style.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Proxima Nova">
+
+    {{ "<!-- feather-icon -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ `feather-icons/css/iconfont.css` | absURL }}">
+  
+    {{ "<!--Favicon-->" | safeHTML }}
+    <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+
     {{ $title := print .Site.Title " | " .Title }}
     <style>
         :root {
@@ -14,6 +26,7 @@
             --primary: {{ .Site.Params.primary }};
             --secondary: {{ .Site.Params.secondary }};
             --accent: {{ .Site.Params.accent }};
+            --grey600: {{ .Site.Params.grey600 }};
             --nav-highlight: {{ .Site.Params.nav_highlight }};
         }
     </style>

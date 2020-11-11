@@ -1,0 +1,23 @@
+{{ $paragraphs := split .Content "^row-divider^" }}
+<div class="text-area">
+    {{ range $index, $p := $paragraphs }}
+    {{ $blocks := split $p "^divider^" }}
+    {{ $content := (index $blocks 0)}}
+    {{ $example := (index $blocks 1)}}
+
+    <!-- {{ $pp := trim (index $blocks 0) " \n" }} -->
+        <div class="row">
+
+            <div class="content-area">
+                <p class="boxtext">
+                    {{ printf "%s\n" $content | safeHTML }}
+                </p>
+            </div>
+            <div class="example-area">
+                {{if $example}}
+                    {{ printf "%s\n" $example | safeHTML }}
+                {{end}}
+            </div>
+        </div>
+    {{end}}
+</div>

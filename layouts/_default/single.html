@@ -1,6 +1,15 @@
 {{ define "main" }}
-<h2 class="page-header">{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+
+<h3 class="page-header">{{ .Title }}</h3>
+
+{{if eq .Params.layout "two-col"}}
+{{- partial "page-layouts/two-col.html" . -}}
 {{ end }}
+
+{{if eq .Params.layout "single-col"}}
+{{- partial "page-layouts/single-col.html" . -}}
+{{ end }}
+
+{{ end }}
+
+

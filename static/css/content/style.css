@@ -1,0 +1,67 @@
+.content {
+    padding: 72px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: scroll;
+}
+
+.text-area{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    padding: 0px;
+    margin: 0px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0px;
+    padding-right: 36px;
+    min-width: 300px;
+
+}
+
+.example-area {
+    padding-left: 36px;
+    flex: 1 1 0px;
+    z-index: 1;
+    max-height: inherit;
+
+}
+
+.content-area.single-row {
+
+}
+
+.highlight{
+    padding: 16px;
+    background-color: var(--secondary);
+}
+
+.example{
+    margin-top:  36px;
+    margin-bottom:  36px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+    bottom: 2rem;
+    max-height: inherit;
+    background-color: var(--secondary);
+}
+
+.scroll{
+    max-height: inherit;
+    overflow: auto;
+    max-width: 500px;
+}
