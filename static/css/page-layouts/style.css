@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    font-size: 14;
+    font: lato;
 }
 
 .text-area{
@@ -24,6 +24,10 @@
     justify-content: space-between;
 }
 
+.content-area .h3{
+    font-size: 20px !important;
+}
+
 .content-area {
     display: flex;
     flex-direction: column;
@@ -33,41 +37,51 @@
 }
 
 .example-area {
-    margin-top: 72px;
+    margin-top: 56px;
     margin-bottom: 72px;
     padding-left: 36px;
     z-index: 1;
     position: -webkit-sticky;
     position: sticky;
-    align-self: flex-start;
     top: 0px;
     bottom: 0px;
     display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: start;
     flex: 1 1 0px;
     min-width: 300px;
 }
 
 .highlight{
     border: 0px;
-    padding: 16px;
-    background-color: var(--secondary);
+    margin: 16px;
+    background-color: var(--grey200);
     max-height: 50vh;
     overflow: auto;
     width: inherit;
+    font-size: 15px;
+}
+
+.highlight code{
+    font-family: Source Code Pro;
 }
 
 .example{
     top: 0px;
     bottom: 0px;
     max-height: inherit;
-    background-color: var(--secondary);
+    background-color: var(--grey200);
     max-height: 70vh;
     min-width: 300px;
     width: inherit;
+    border-radius: 10px;
+    margin-bottom: 16px;
 }
 
-.scroll{
+.scroll {
     max-height: inherit;
     overflow: auto;
     max-width: 500px;
+    border-radius: 10px;
 }

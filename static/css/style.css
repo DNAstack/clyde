@@ -13,7 +13,7 @@ h1 {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 140%;
     margin: 0;
     padding: 8px 0px;
@@ -45,7 +45,7 @@ h4 {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 140%;
     margin: 0;
     padding: 8px 0px;
@@ -55,7 +55,7 @@ p {
     font-family: Proxima Nova;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 140%;
 }
 
@@ -85,5 +85,5 @@ p {
 .footer {
     padding: 0px;
     margin: 0;
+    text-align: center;
 }
-

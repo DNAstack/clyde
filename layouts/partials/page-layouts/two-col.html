@@ -1,9 +1,9 @@
-{{ $paragraphs := split .Content "^row-divider^" }}
+{{ $paragraphs := split .Content "{row-divider}" }}
 <div class="text-area">
-<h1>{{- .Title -}}</h1>
+<h2>{{- .Title -}}</h2>
 {{ range $index, $pp := $paragraphs }}
 {{ $p := trim $pp " \n  " }}
-{{ $blocks := split $p "^divider^" }}
+{{ $blocks := split $p "{divider}" }}
 {{ $content := trim (index $blocks 0) " \n  "}}
 {{ $example := trim (index $blocks 1) " \n  "}}
     {{if not (eq $index 0)}}
