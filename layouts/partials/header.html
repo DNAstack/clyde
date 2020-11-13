@@ -1,8 +1,8 @@
-<div class="sidebar">
+<div class="sidebar" id="sidebar-nav">
     {{ $logo:= site.Params.logo }}
-    <a href="{{.Site.Home.Permalink}}" >
+<button id="logo-collapse-btn" onclick="(function(){document.getElementById('sidebar-nav').classList.toggle('show');document.getElementById('content').classList.toggle('showing-nav')})()" >
         <img id="logo" src="{{ $logo | absURL }}" alt="{{ site.Title }}"> 
-    </a>
+    </button>
 
     {{ template "nav_item" .}}
 </div>
@@ -16,9 +16,9 @@
 {{ range (where .Site.Pages "Type" "product") }}
     <div class="collapse-header">
         <a class="nav-link" href="{{.Permalink}}"> 
+            <i class="{{ .Params.Icon }} navicon"></i>
             <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} mainitem" 
             id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
-                <i class="{{ .Params.Icon }} navicon"></i>
                 {{ .Title }}
             </h3>
         </a>

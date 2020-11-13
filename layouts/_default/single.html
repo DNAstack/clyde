@@ -3,9 +3,7 @@
 
 {{if eq .Params.layout "two-col"}}
 {{- partial "page-layouts/two-col.html" . -}}
-{{ end }}
-
-{{if eq .Params.layout "single-col"}}
+{{ else }}
 {{- partial "page-layouts/single-col.html" . -}}
 {{ end }}
 
