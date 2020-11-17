@@ -10,6 +10,7 @@
 .nav-tabs .nav-link{
   border-radius: inherit;
   font-size: 14px;
+  justify-content: center;
 }
 
 pre{
