@@ -95,7 +95,7 @@
     }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1024px) {
     /* CSS that should be displayed if width is equal to or less than 1000px goes here */
     .example-area {
         position: inherit;
