@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     flex-shrink: 1;
-    width: calc(100vw - 72px);
+    width: calc(100vw - 225px);
 }
 
 .search-icon {
@@ -174,5 +174,13 @@
 
     .showing-nav #search-input-div {
         left: 298px;
+    }
+
+    .content-header{
+        width: calc(100vw - 72px);
+    }
+
+    .showing-nav .content-header{
+        width: calc(100vw - 225px);
     }
 }
