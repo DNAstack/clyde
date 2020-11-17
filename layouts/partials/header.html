@@ -15,7 +15,7 @@
 <div class="card sidebar-card">
 {{ range (where .Site.Pages "Type" "product") }}
     <div class="collapse-header">
-        <a class="nav-link" href="{{.Permalink}}"> 
+        <a class="nav-link" href="{{.RelPermalink}}"> 
             <i class="{{ .Params.Icon }} navicon"></i>
             <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} mainitem" 
             id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
@@ -27,7 +27,7 @@
     <div class="collapse {{if $curPage.IsDescendant . }}show{{end}}">
         <div class="nav-list">
             {{ range .Pages }}
-                <a class="nav-link" href="{{.Permalink}}"> 
+                <a class="nav-link" href="{{.RelPermalink}}"> 
                     <h3 class="sidebar-h2 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} subitem" 
                     id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
                         {{ .Title }}
