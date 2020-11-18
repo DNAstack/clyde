@@ -122,6 +122,10 @@
     outline: none;
 }
 
+#logo-collapse-btn:hover {
+    cursor: default;
+}
+
 @media (max-width: 1400px) {
     /* CSS that should be displayed if width is equal to or less than 1000px goes here */
     .sidebar .sidebar-h1{
@@ -144,6 +148,10 @@
         .sidebar:hover{
             width: 225px;
         }
+    }
+
+    #logo-collapse-btn:hover {
+        cursor: pointer;
     }
 
     .sidebar.show .sidebar-h1{
