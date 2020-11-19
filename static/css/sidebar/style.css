@@ -28,7 +28,7 @@
 .sidebar {
     width: 225px;
     margin: 0;
-    background-color: var(--secondary);
+    background-color: var(--sidebar);
     color: var(--primary);
     order: -1; /* default is 0 */
     overflow-y: hidden;
@@ -44,7 +44,7 @@
 }
 
 .sidebar-card {
-    background-color: var(--secondary) !important;
+    background-color: var(--sidebar) !important;
     border: 0px !important;
     overflow: auto;
     width: inherit;
@@ -68,7 +68,7 @@
     display: flex !important;
     align-items: center;
     justify-content: start;
-    color: #9296a0;
+    color: var(--grey-200);
 }
 
 .nav-link:hover{
