@@ -13,7 +13,7 @@
 {{ $curPage := .}}
 
 <div class="card sidebar-card">
-{{ range (where .Site.Pages "Type" "product") }}
+{{ range (where .Site.Pages "Type" in ["product", "category"]) }}
     <div class="collapse-header">
         <a class="nav-link" href="{{.RelPermalink}}"> 
             <i class="{{ .Params.Icon }} navicon"></i>
