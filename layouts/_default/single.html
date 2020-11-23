@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{- partial "header.html" . -}}
+<div class="content" id="content">
 {{- partial "page-layouts/content-header.html" -}}
 
 {{if eq .Params.layout "two-col"}}
@@ -6,6 +8,7 @@
 {{ else }}
 {{- partial "page-layouts/single-col.html" . -}}
 {{ end }}
+</div>
 
 {{ end }}
 

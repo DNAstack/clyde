@@ -1,17 +1,7 @@
 {{ define "main" }}
-
-{{- partial "page-layouts/content-header.html" -}}
-<div class="text-area">
-    <h2>{{- .Title -}}</h2>
-    {{ .Content }}
-    {{ range .Pages }}
-    <h4><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-    {{if .Description}}
-    <p>{{- .Description -}}</p>
+    {{ with index .Pages 0 }}
+        {{.Render}}
     {{end}}
-{{ end }}
-</div>
-
 {{ end }}
 
 
