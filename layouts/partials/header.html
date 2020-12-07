@@ -14,12 +14,14 @@
 
 <div class="card sidebar-card">
 {{ range (where .Site.Pages "Type" "category") }}
+    {{if eq $curSection .Section}}
     <div class="collapse-header">
         <a class="nav-link" href="{{.RelPermalink}}"> 
             <i class="{{ .Params.Icon }} navicon"></i>
             <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} mainitem" 
             id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
                 {{ .Title }}
+                
             </h3>
         </a>
     </div>
@@ -36,6 +38,7 @@
             {{ end }}                
         </div>
     </div>
+    {{ end }}
 {{ end }}
 </div>
 {{ end }}
