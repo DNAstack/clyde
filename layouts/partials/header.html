@@ -3,15 +3,16 @@
     <button id="logo-collapse-btn" onclick="(function(){document.getElementById('sidebar-nav').classList.toggle('show');document.getElementById('content').classList.toggle('showing-nav')})()" >
         <img id="logo" src="{{ $logo }}" alt="{{ site.Title }}"> 
     </button>
-
     {{ template "nav_item" .}}
+    {{if not (eq (len site.Menus.footer) 0)}}
+        {{- partial "footer.html" . -}}
+    {{end}}
 </div>
 
 {{ define "nav_item" }}
 {{ $curSection := .Section}}
 {{ $curUID := .File.UniqueID }}
 {{ $curPage := .}}
-
 <div class="card sidebar-card">
 {{ range (where .Site.Pages "Type" "category") }}
     {{if eq $curSection .Section}}

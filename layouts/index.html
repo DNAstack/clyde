@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ with .Site.GetPage "/docs" }}
+    {{ with .Site.GetPage .Site.Params.home}}
         {{.Render}}
     {{end}}
 {{ end }}
