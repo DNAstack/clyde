@@ -60,6 +60,15 @@ p {
     color: var(--grey800);
 }
 
+li {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    color: var(--grey800);
+}
+
 .img-fluid{
     padding: 27px 8px !important;
 }
