@@ -158,6 +158,9 @@
     .sidebar .collapse{
         display: none;
     }
+    .sidebar .footer-container{
+        display: none;
+    }
     .sidebar{
         width: 72px;
     }
