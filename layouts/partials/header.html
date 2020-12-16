@@ -7,7 +7,7 @@
     </button>
     <!-- renders nav items -->
     {{ template "nav_item" .}}
-    {{if not (eq (len site.Menus.footer) 0)}}
+    {{if site.Menus }}
         {{- partial "footer.html" . -}}
     {{end}}
 </div>
