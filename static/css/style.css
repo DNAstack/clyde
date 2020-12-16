@@ -69,6 +69,13 @@ li {
     color: var(--grey800);
 }
 
+pre {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex: none;
+}
 .img-fluid{
     padding: 27px 8px !important;
 }
@@ -114,13 +121,6 @@ li {
     right: 8px;
     margin: 24px 0px;
 }
-
-/* .scroll-box {
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
-    bottom: 0px;
-} */
 
 .img-fluid {
     padding: 20px;
