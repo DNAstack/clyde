@@ -88,6 +88,10 @@ pre {
     margin: 24px 0px;
 }
 
+span {
+    margin: 8px 0px;  
+}
+
 /* .scroll-box {
     padding: 0;
     margin: 0;
