@@ -223,6 +223,7 @@
 
     .icon-menu.mobile{
         font-size: 32px;
+        color: var(--grey600);
     }
 
     #logo-collapse-btn{
