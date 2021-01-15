@@ -30,7 +30,6 @@
             <h3 class="sidebar-h1 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} mainitem" 
             id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
                 {{ .Title }}
-                
             </h3>
         </a>
     </div>
@@ -45,7 +44,7 @@
                         {{ if .Title}}
                             {{ .Title }}
                         {{ else }}
-                        {{$f_name }}
+                            {{$f_name }}
                         {{end}}
                     </h3>
                 </a>
