@@ -11,11 +11,11 @@
     <!-- user override for anything not included here -->
     <link rel="stylesheet" type="text/css" href="/override/style.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto">
+          href="https://fonts.googleapis.com/css?family={{ .Site.Params.body_font }}">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Poppins">
+          href="https://fonts.googleapis.com/css?family={{ .Site.Params.heading_font }}">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source Code Pro">
+          href="https://fonts.googleapis.com/css?family={{ .Site.Params.code_font }}">
 
     {{ "<!-- feather-icon -->" | safeHTML }}
     <link rel="stylesheet" href="/feather-icons/css/iconfont.css">
