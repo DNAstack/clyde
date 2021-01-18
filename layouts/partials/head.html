@@ -43,6 +43,9 @@
             --grey900: {{ .Site.Params.grey900 }};
             --grey-head: {{ .Site.Params.grey_head }};
             --nav-highlight: {{ .Site.Params.nav_highlight }};
+            --body-font: {{ .Site.Params.body_font }};
+            --heading-font: {{ .Site.Params.heading_font }};
+            --code-font: {{ .Site.Params.code_font }};
         }
     </style>
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
