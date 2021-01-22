@@ -1,7 +1,7 @@
 <div class="footer-root">
     <div class="footer-prev">
         {{ with .NextInSection }}
-            <a class="content-header-nav-link" href="{{ .Permalink }}">
+            <a class="content-header-nav-link" href="{{ .RelPermalink }}">
                 <i class='icon-arrow-left'></i>
             </a>
         {{end}}
@@ -19,7 +19,7 @@
     </div>
     <div class="footer-next">
         {{ with .PrevInSection }}
-            <a class="content-header-nav-link" href="{{ .Permalink  }}">
+            <a class="content-header-nav-link" href="{{ .RelPermalink  }}">
                 <i class='icon-arrow-right'></i>
             </a>
         {{end}}
