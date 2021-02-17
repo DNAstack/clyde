@@ -1,26 +1,22 @@
 <div class="footer-root">
     <div class="footer-prev">
         {{ with .NextInSection }}
-            <a class="content-header-nav-link" href="{{ .RelPermalink }}">
+            <a class="content-header-nav-link arrow-nav" href="{{ .RelPermalink }}">
                 <i class='icon-arrow-left'></i>
             </a>
         {{end}}
     </div>
     <div class="footer-nav">
-        {{ range .Site.Menus.main }}
+        {{ range .Site.Menus.footer }}
         <a class="content-header-nav-link" href="{{ .URL }}">
-            {{if .Pre}}
-                {{.Pre}}
-            {{else}}
-                {{.Name}}
-            {{end}} 
+            {{.Name}}
         </a>
         {{ end }}
     </div>
     <div class="footer-next">
         {{ with .PrevInSection }}
             <a class="content-header-nav-link" href="{{ .RelPermalink  }}">
-                <i class='icon-arrow-right'></i>
+                <i class='icon-arrow-right arrow-nav'></i>
             </a>
         {{end}}
     </div>

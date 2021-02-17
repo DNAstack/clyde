@@ -9,10 +9,13 @@
     justify-content: stretch;
     font-family: var(--body-font);
 }
-
 .footer-root {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
 }
+
 .footer-prev {
     display: flex;
     align-items: center;
@@ -22,8 +25,8 @@
 .footer-nav {
     display: flex;
     align-items: center;
-    flex: 1;
-    justify-content: space-around;
+    flex: 10;
+    justify-content: center;
 }
 .footer-next {
     display: flex;
@@ -208,9 +211,5 @@
     .content{
         width: 100vw;
     }
-    .footer-root {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between
-    }
+
 }
