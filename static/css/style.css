@@ -54,10 +54,25 @@ h4 {
     font-family: var(--heading-font);
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 140%;
     margin: 0;
     padding: 8px 0px;
+}
+
+h5 {
+    font-family: var(--heading-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    margin: 0;
+    padding: 8px 0px;
+}
+
+.text-area h5{
+    font-size: 18px;
+    font-weight: 500;
 }
 
 p {
