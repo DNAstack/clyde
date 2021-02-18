@@ -102,7 +102,10 @@ pre {
 }
 
 .chroma span{
-    font-size: 11px;
+    font-size: inherit;
+}
+.chroma code {
+    font-size: 0.6875   em;
 }
 
 .img-fluid{

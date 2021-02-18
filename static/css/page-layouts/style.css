@@ -113,10 +113,15 @@
 
 .highlight{
     border: 0px;
-    padding: 16px 16px 0px 16px;
+    padding: 0px;
     background-color: var(--grey200);
     font-size: 15px;
     overflow: visible;
+}
+
+.code-block {
+    padding: 1rem 1rem 0rem 1rem;
+    background-color: var(--grey200);
 }
 
 .highlight code{
@@ -153,17 +158,16 @@
     max-height: inherit;
 }
 
-@media (max-width: 1400px){
+/* @media (max-width: 1400px){
     .showing-nav .text-area{
         width: calc(100vw - 225px);
     }
     .text-area{
         width: calc(100vw - 72px);
     }
-}
+} */
 
-@media (max-width: 1024px) {
-    /* CSS that should be displayed if width is equal to or less than 1000px goes here */
+/* @media (max-width: 1024px) {
     .example-area {
         position: inherit;
         margin-top: 56px;
@@ -204,7 +208,7 @@
         padding-right: 0;
         width: 100%;
     }
-}
+} */
 
 @media (max-width: 900px) {
     .showing-nav.content {
