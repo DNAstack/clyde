@@ -64,8 +64,8 @@
     padding: 0px;
 }
 .sidebar-button {
-    margin: 0;
-    padding: 8px 0px 8px 0px !important;
+    padding: 0px;
+    margin: 0px;
 }
 
 .sidebar-card {
@@ -192,6 +192,7 @@
     .icon-menu.mobile{
         font-size: 32px;
         color: var(--grey600);
+        padding: 8px 0px 8px 0px;
     }
 
     #logo-collapse-btn{
@@ -208,6 +209,8 @@
         border: 0px;
         border-radius: 16px;
         background-color: transparent;
+        padding: 0px;
+        margin: 0px 8px;
     }
     #sidebar-btn:focus {
         outline: none;

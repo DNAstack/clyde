@@ -158,59 +158,22 @@
     max-height: inherit;
 }
 
-/* @media (max-width: 1400px){
-    .showing-nav .text-area{
-        width: calc(100vw - 225px);
-    }
-    .text-area{
-        width: calc(100vw - 72px);
-    }
-} */
+.text-area .chroma .lntable {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
 
-/* @media (max-width: 1024px) {
-    .example-area {
-        position: inherit;
-        margin-top: 56px;
-        margin-bottom: 72px;
-        padding-left: 0;
-        z-index: 1;
-        top: 0px;
-        bottom: 0px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;        
-        align-self: flex-start;
-        flex-direction: column;
-        justify-content: start;
-        flex: 1 1 0px;
-        width: 100%;
-    }
-    .row {
-        padding: 0px;
-        margin: 0px !important;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;        
-        flex-direction: column;
-        justify-content: start;
-        align-items: stretch;
-        width: 100%;
-    }
-    .content-area {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 0px;
-        padding-right: 0;
-        width: 100%;
-    }
-} */
+.text-area figure {
+    width: 80%;
+}
+.text-area figure img {
+    width: 100%;
+}
 
 @media (max-width: 900px) {
+    .text-area figure {
+        width: 100%;
+    }
     .showing-nav.content {
         display: none;
     }
