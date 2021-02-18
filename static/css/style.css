@@ -79,7 +79,7 @@ p {
     font-family: var(--body-font);
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 140%;
     color: var(--grey800);
 }
@@ -100,6 +100,11 @@ pre {
     display: flex;
     flex: none;
 }
+
+.chroma span{
+    font-size: 11px;
+}
+
 .img-fluid{
     padding: 27px 8px !important;
 }
@@ -157,7 +162,8 @@ pre {
 }
 
 hr.solid {
-    border-top: 2px solid var(--grey-head);
+    border-top: 1px solid var(--grey-head);
     width: 100%;
-    margin-top: 32px;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
