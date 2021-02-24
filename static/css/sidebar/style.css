@@ -28,7 +28,7 @@
 }
 
 .sidebar {
-    width: 225px;
+    width: 260px;
     margin: 0;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-primary);
@@ -44,7 +44,7 @@
 }
 
 .site-title {
-    margin-top: 33px;
+    margin-top: 10px;   
     margin-right: 20px;
     margin-bottom: 36px;
     margin-left: 24px;
