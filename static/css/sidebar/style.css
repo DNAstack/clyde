@@ -28,7 +28,7 @@
 }
 
 .sidebar {
-    width: 260px;
+    width: 250px;
     margin: 0;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-primary);
@@ -120,9 +120,10 @@
     margin-left: 20px;
     width: 32px;
     margin-bottom: 44px;
+}
+#logohide{
     display: none;
 }
-
 .nav-highlight{
     color: var(--sidebar-primary) !important;
     
@@ -177,7 +178,7 @@
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .sidebar{
         display: none;
     }

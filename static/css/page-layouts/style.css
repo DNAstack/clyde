@@ -179,7 +179,7 @@
     padding-inline-start: 16px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .text-area figure {
         width: 100%;
     }
