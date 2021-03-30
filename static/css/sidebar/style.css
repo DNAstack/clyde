@@ -115,10 +115,10 @@
     color: var(--sidebar-primary);
 }   
 
-#logo{
-    margin-top: 24px;
+#logo {
+    margin-top: 12px;
     margin-left: 20px;
-    width: 80%;
+    width: 70%;
     margin-bottom: 44px;
     display: flex;
 }
