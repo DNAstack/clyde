@@ -184,7 +184,7 @@
         width: 100%;
     }
     .showing-nav.content {
-        display: none;
+        /* display: none; */
     }
     .text-area{
         padding: 7px 14px;

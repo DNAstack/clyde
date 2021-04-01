@@ -4,6 +4,7 @@
     {{ $logo:= site.Params.logo }}
     <button id="logo-collapse-btn" onclick="(function(){document.getElementById('sidebar-nav').classList.toggle('show');document.getElementById('content').classList.toggle('showing-nav')})()" >
         <img id="logo" src="{{ $logo }}" alt="{{ site.Title }}"> 
+        <i class="icon-x mobile sidebar-close-btn"></i>
         {{if site.Params.show_title}}
         <div class="site-title">
             <h3 class="site-title-text"> 
@@ -14,18 +15,12 @@
     </button>
     <!-- renders nav items -->
     {{ template "nav_item" .}} 
-    <div class="collapse-header">
-        <a class="nav-link" href="/docs/support/"> 
-            <i class="icon-help-circle navicon"></i>
-            <h3 class="sidebar-h1 mainitem">
-                Support
-            </h3>
-        </a>
-    </div>
 </div>
+<div class="card sidebar-card">
 <button id="sidebar-btn" onclick="(function(){document.getElementById('sidebar-nav').classList.toggle('show');document.getElementById('content').classList.toggle('showing-nav')})()" >
     <i class="icon-menu mobile"></i>
 </button>
+</div>
 {{ end }}
 
 
@@ -81,4 +76,10 @@
     {{ end }}
 {{ end }}
 </div>
+<a class="nav-link" href="/docs/support/"> 
+    <i class="icon-help-circle navicon"></i>
+    <h3 class="sidebar-h1 mainitem">
+        Support
+    </h3>
+</a>
 {{ end }}
