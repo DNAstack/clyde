@@ -56,6 +56,9 @@
     <div class="collapse {{if $curPage.IsDescendant . }}show{{end}}">
         <div class="nav-list">
             {{ range .Pages }}
+                {{ $hiddenPages := (getenv "HUGO_PARAMS_hiddenPages") }}
+                {{ if and (.Title) (in $hiddenPages .Title) }}
+                {{ else }}
                 {{$f_name := .File.LogicalName}}
                 <a class="nav-link" href="{{.RelPermalink}}"> 
                     <h3 class="sidebar-h2 {{if eq $curUID .File.UniqueID}}nav-highlight{{end}} subitem" 
@@ -67,6 +70,7 @@
                         {{end}}
                     </h3>
                 </a>
+                {{ end }}
             {{ end }}                
         </div>
     </div>
