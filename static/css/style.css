@@ -104,8 +104,14 @@ pre {
 .chroma span{
     font-size: inherit;
 }
+
 .chroma code {
+    word-wrap: normal;
     font-size: 0.6875   em;
+}
+
+code {
+    word-wrap: normal;
 }
 
 .img-fluid{
