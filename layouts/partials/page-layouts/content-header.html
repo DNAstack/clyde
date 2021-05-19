@@ -17,13 +17,23 @@
             </div>
         </div>
     </div>
-    <div class="content-header-nav">
-        {{ range .root.Site.Menus.main }}
-            <a class="content-header-nav-link" href="{{ .URL }}">
-                {{ .Pre }} 
-                <span class="top-nav-text">{{ .Name }}</span>
-            </a>
-        {{ end }}
-    </div>
+    
 
+</div>
+
+{{ $curSection := .root.Section}}
+{{ $curPage := .root }}
+<div class='nav nav-tabs'> 
+        <a class='nav-item nav-link {{if eq $curSection "publisher"}}active{{end}}' href="/publisher">
+            <i class="navicon"></i>
+            <h3 class='sidebar-h1 mainitem'>Publisher</h3>
+        </a>
+        <a class='nav-link {{if eq $curSection "passport"}}active{{end}}' href="/passport">
+            <i class="navicon"></i>
+            <h3 class='sidebar-h1 mainitem'>Passport</h3>
+        </a>
+        <a class='nav-link {{if eq $curSection "explorer"}}active{{end}}' href="/explorer">
+            <i class="navicon"></i>
+            <h3 class='sidebar-h1 mainitem content-tab'>Explorer</h3>
+        </a>
 </div>
