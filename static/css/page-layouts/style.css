@@ -44,9 +44,6 @@
     justify-content: flex-end;
 }
 
-.footer-nav-root .content-header-nav-link{
-    font-family: Roboto;
-}
 
 .text-area{
     overflow-y: scroll;
