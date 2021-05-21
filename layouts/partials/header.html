@@ -35,10 +35,10 @@
 {{ $curSection := .Section}}
 {{ $curUID := .File.UniqueID }}
 {{ $curPage := . }}
-{{ $curApp := index (split . "/") 1 }}
+{{ $curApp := index (split . "/") 2 }}
 <div class="card sidebar-card">
 {{ range (where .Site.Pages "Type" "category") }}
-    {{ if eq (index (split .Dir "/") 0) $curApp }}
+    {{ if eq (index (split .Dir "/") 1) $curApp }}
         {{ if eq $curSection .Section }}
             {{ if eq (len .Pages) 0 }}
             {{ else if eq (len .Pages) 1 }}
