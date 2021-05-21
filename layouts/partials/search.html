@@ -27,7 +27,7 @@ function renderSearchResults(results){
             var article = document.createElement('article')
             var uri = result.ref.replace("/index.json","")
             article.innerHTML = `
-            <a href="${uri}" class="search-result-item"><p class="search-result-title">${documents[result.ref].title} | <span class="search-result-section">${documents[result.ref].section}</span></p></a>
+            <a href="${uri}" class="search-result-item"><p class="search-result-title">${documents[result.ref].title} | <span class="search-result-section">${documents[result.ref].section}</span></p> <i class="icon-external-link"></i></a>
             `
             searchResults.appendChild(article)
         })

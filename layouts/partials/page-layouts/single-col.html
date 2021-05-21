@@ -1,5 +1,5 @@
 <div class="text-area">
-<h2>{{if eq $.Params.show_page_title false}}{{else}}{{- .Title -}}{{end}}</h2>
+<h2>{{- .Title -}}</h2>
 {{ .Content }}
 {{- partial "page-layouts/content-footer.html" . -}}
 </div>
