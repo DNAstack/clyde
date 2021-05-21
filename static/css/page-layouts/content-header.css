@@ -151,7 +151,7 @@
 }
 
 .search-result-item{
-    color: var(--grey800);
+    color: var(--grey600);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -179,11 +179,6 @@
 
 .search-result-title:hover{
     color: inherit
-}
-
-.search-result-section{
-    margin: 0px;
-    text-transform: capitalize;
 }
 
 #search-footer{

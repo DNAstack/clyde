@@ -27,7 +27,7 @@ function renderSearchResults(results){
             var article = document.createElement('article')
             var uri = result.ref.replace("/index.json","")
             article.innerHTML = `
-            <a href="${uri}" class="search-result-item"><p class="search-result-title">${documents[result.ref].title} | <span class="search-result-section">${documents[result.ref].section}</span></p> <i class="icon-external-link"></i></a>
+            <a href="${uri}" class="search-result-item"><p class="search-result-title">${documents[result.ref].title}</p> <i class="icon-external-link"></i></a>
             `
             searchResults.appendChild(article)
         })
@@ -92,14 +92,12 @@ window.onload = function() {
                 this.ref('url')
                 this.field('title')
                 this.field('content')
-                this.field('section')
 
                 res.forEach(function(doc) {
                     this.add(doc)
                     documents[doc.url] = {
                         'title': doc.title,
                         'content': doc.content,
-                        'section': doc.section
                     }
                 }, this)
             })
