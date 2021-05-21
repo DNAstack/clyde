@@ -1,6 +1,7 @@
 .content-header{
     margin: 0;
     padding: 12px 70px 12px 70px;
+    background: var(--grey-head);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -103,9 +104,9 @@
     border-radius: 3px;
     flex: 1 1 0px;
     top: 12px;
-    left: 328px;
+    left: 330px;
     right: 72px;
-    width: calc(100vw - 400px);
+    width: calc(100vw - 370px);
 }
 
 .modal-dialog {
@@ -129,6 +130,7 @@
     /* border-bottom: 2px solid var(--accent); */
 }
 
+
 #search-results{
     background-color: var(--primary);
     color: var(--primary);
@@ -143,7 +145,7 @@
     bottom: auto;
     right: auto;
     margin-left: -1px;
-    width: calc(100vw - 400px);
+    width: calc(100vw - 370px);
 }
 
 #search-results:empty{

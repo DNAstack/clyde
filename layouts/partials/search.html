@@ -67,10 +67,6 @@ function registerSearchHandler() {
 
 $('#search-input-modal').on('shown.bs.modal', function () {
   $('#search-input').trigger('focus')
-  if ($(".modal-backdrop").length > 1) {
-    $(".modal-backdrop").not(':first').remove();
-  }
-
 })
 
 window.onload = function() {
