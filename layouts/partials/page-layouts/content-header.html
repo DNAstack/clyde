@@ -16,17 +16,16 @@
                 </div>
             </div>
         </div>
+
+        
     </div>
     
-
+    {{ $curSection := .root.Section}}
+    {{ range .root.Site.Sections }}
+        <a class='nav-link {{if eq $curSection .Section }}active{{end}}' href="{{ .RelPermalink }}">
+            <i class=" navicon"></i>
+            <h3 class='sidebar-h1 mainitem content-tab'>{{ .Title | plainify | humanize }}</h3>
+        </a>
+    {{ end }}
 </div>
 
-{{ $curSection := .root.Section}}
-<div class='nav nav-tabs'> 
-{{ range .root.Site.Sections }}
-    <a class='nav-link {{if eq $curSection .Section }}active{{end}}' href="{{ .RelPermalink }}">
-        <i class="navicon"></i>
-        <h3 class='sidebar-h1 mainitem content-tab'>{{ .Title | plainify | humanize }}</h3>
-    </a>
-{{ end }}
-</div>
