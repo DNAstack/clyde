@@ -120,8 +120,8 @@
     top: 12px;
     left: 328px;
     right: 72px;
-    width: calc(100vw - 1280px);
-    max-width: calc(100vw - 1280px);
+    min-width: min(500px,100vw - 660px);
+    max-width: min(500px,100vw - 660px);
 }
 
 .modal-dialog {
@@ -159,7 +159,8 @@
     bottom: auto;
     right: auto;
     margin-left: -1px;
-    width: calc(100vw - 1280px);
+    min-width: min(500px,100vw - 660px);
+    max-width: min(500px,100vw - 660px);
 }
 
 #search-results:empty{
@@ -248,13 +249,17 @@
     #search-input-div {
         left: 0px;
         width: 100vw;
+        min-width: none;
+        max-width: none;
     }
     #search-input {
         width: 100vw;
         left: 0px;
     }
     #search-results{
-        width: 100vw
+        width: 100vw;
+        min-width: none;
+        max-width: none;
     }
     .content-header{
         padding: 12px 32px 12px 70px;
