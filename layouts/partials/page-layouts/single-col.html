@@ -1,5 +1,9 @@
+
 <div class="text-area">
-<h2>{{if eq $.Params.show_page_title false}}{{else}}{{- .Title -}}{{end}}</h2>
+
+<div class="text-card">
+    <h2>{{if eq $.Params.show_page_title false}}{{else}}{{- .Title -}}{{end}}</h2>
 {{ .Content }}
+</div>
 {{- partial "page-layouts/content-footer.html" . -}}
 </div>

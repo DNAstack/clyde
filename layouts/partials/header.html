@@ -1,17 +1,7 @@
 {{ $curSection := .Section}}
 {{if not (eq (len $curSection) 0)}}
 <div class="sidebar" id="sidebar-nav">
-    {{ $logo:= site.Params.logo }}
-    <button id="logo-collapse-btn" onclick="(function(){document.getElementById('sidebar-nav').classList.toggle('show');document.getElementById('content').classList.toggle('showing-nav')})()" >
-        <img id="logo{{if site.Params.show_title}}hide{{end}}" src="{{ $logo }}" alt="{{ site.Title }}"> 
-        {{if site.Params.show_title}}
-        <div class="site-title">
-            <h3 class="site-title-text"> 
-                {{.Site.Title}}
-            </h3>
-        </div>
-        {{end}}
-    </button>
+    
     <!-- renders nav items -->
     {{ template "nav_item" .}} 
     {{if site.Params.show_support}}
@@ -41,22 +31,22 @@
             {{ if eq (len .Pages) 0 }}
             {{ else if eq (len .Pages) 1 }}
             <div class="collapse-header">
-                <a class="nav-link" href="{{.RelPermalink}}">
-                    <i class="{{ .Params.Icon }} navicon"></i>
-                    <h3 class="sidebar-h1 {{if $curPage.IsDescendant . }}nav-highlight{{end}} mainitem"
-                    id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
-                        {{ .Title }}
-                    </h3>
-                </a>
+                <h3 class="sidebar-h1 {{if $curPage.IsDescendant . }}nav-highlight{{end}} mainitem"
+                id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
+                    {{ .Title | upper }}
+                </h3>
+                <div class="nav-toc">
+                    {{ .RenderString (replace (index .Pages 0).TableOfContents "#" (delimit (slice .RelPermalink "#") "")) }}
+                </div>
             </div>
             {{ else }}
             <div class="collapse-header">
                 <a class="nav-link" href="{{.RelPermalink}}">
-                    <i class="{{ .Params.Icon }} navicon"></i>
                     <h3 class="sidebar-h1 mainitem"
                     id="{{if eq $curUID .File.UniqueID}}scrollto{{end}}">
-                        {{ .Title }}
+                        {{ .Title | upper }}
                     </h3>
+                    
                 </a>
             </div>
 
@@ -74,11 +64,17 @@
                                 {{end}}
                             </h3>
                         </a>
+                        <div class="nav-toc">
+                            {{- (index .Pages 0).RenderString (replace (index .Pages 0).TableOfContents "#" (delimit (slice .RelPermalink "#") "")) -}}
+                        </div>
                     {{ end }}
                 </div>
             </div>
-            {{ end }}
+            
+        {{ end }}
+        <hr/>
     {{ end }}
+    
 {{ end }}
 </div>
 {{ end }}
