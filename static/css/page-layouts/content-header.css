@@ -13,6 +13,9 @@
     color: var(--sidebar-primary);
     height: fit-content;
     align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
     
 }
 

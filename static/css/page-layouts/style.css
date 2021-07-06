@@ -10,7 +10,6 @@
     flex-wrap: nowrap;
     justify-content: start;
     font-family: var(--body-font);
-    width: 100vw;
 }
 .footer-root {
     display: flex;
@@ -61,6 +60,10 @@
     justify-content: start;
     width: calc(100vw - 267px);
     background-color: var(--grey-head);
+    position: relative;
+    left: 267px;
+    top: 68px;
+    z-index: -1;
 }
 
 .text-card {
@@ -73,7 +76,7 @@
     flex-direction: column;
     flex: 1 1 0px;
     justify-content: start;
-    width: calc(100vw - 341px);
+    width: calc(100vw - 331px);
     background-color: var(--primary);
     height: fit-content;
 }
