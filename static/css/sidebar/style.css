@@ -41,6 +41,7 @@
     position: fixed;
     left: 0;
     top: 68px;
+    z-index: -1;
     
     overflow-y: scroll;
     /* Hide scrollbar for IE, Edge and Firefox */

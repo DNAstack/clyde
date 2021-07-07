@@ -143,6 +143,10 @@
     left: 0px;
 }
 
+.modal-backdrop {
+    z-index: -1 !important;
+}
+
 #search-input {
     background-color: var(--primary);
     color: var(--secondary);
@@ -259,22 +263,27 @@
         margin: 0px;
     }
     #search-input-div {
-        left: 0px;
-        width: 100vw;
+        left: 70px;
         min-width: none;
         max-width: none;
+        width: 100%;
+        margin-left: 0;
     }
     #search-input {
-        width: 100vw;
-        left: 0px;
+        width: 100%;
+        position: relative;
     }
     #search-results{
-        width: 100vw;
-        min-width: none;
-        max-width: none;
+        min-width: calc(100vw - 104px);
+        max-width: calc(100vw - 104px);
+        left: 70px;
     }
     .content-header{
         padding: 12px 32px 12px 70px;
+        justify-content: stretch;
+    }
+    #logo-collapse-btn {
+        display: none !important;
     }
 }
 
