@@ -64,6 +64,8 @@
     left: 267px;
     top: 68px;
     z-index: -1;
+    min-height: calc(100vh - 68px);
+
 }
 
 .text-card {
@@ -78,6 +80,7 @@
     justify-content: start;
     background-color: var(--primary);
     height: fit-content;
+    
 }
 
 
