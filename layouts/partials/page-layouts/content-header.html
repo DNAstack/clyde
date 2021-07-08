@@ -1,6 +1,6 @@
 <div class="content-header {{if .root.Site.Menus.main}}hasmenu{{end}}">
     {{ $logo:= site.Params.logo }}
-    <button id="logo-collapse-btn" onclick="(function(){document.getElementById('sidebar-nav').classList.toggle('show');document.getElementById('content').classList.toggle('showing-nav')})()" >
+    <a href='/'>
         <img id="logo{{if site.Params.show_title}}hide{{end}}" src="{{ $logo }}" alt="{{ site.Title }}"> 
         {{if site.Params.show_title}}
         <div class="site-title">
@@ -9,7 +9,7 @@
             </h3>
         </div>
         {{end}}
-    </button>
+    </a>
     
     
     
