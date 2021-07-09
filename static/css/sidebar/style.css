@@ -240,7 +240,7 @@
     #sidebar-btn {
         display: unset;
         position: fixed;
-        z-index: 2;
+        z-index: 1060;
         top: 16px;
         left: 12px;
         width: 32px;

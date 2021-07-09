@@ -1,5 +1,6 @@
 <div class="content-header {{if .root.Site.Menus.main}}hasmenu{{end}}">
     {{ $logo:= site.Params.logo }}
+    
     <a href='/'>
         <img id="logo{{if site.Params.show_title}}hide{{end}}" src="{{ $logo }}" alt="{{ site.Title }}"> 
         {{if site.Params.show_title}}
