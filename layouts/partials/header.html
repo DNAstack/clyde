@@ -26,6 +26,7 @@
 {{ $curUID := .File.UniqueID }}
 {{ $curPage := . }}
 <div class="card sidebar-card">
+<h3 class="sidebar-h1 sidebar-section">{{ $curSection | humanize }}</h3>
 {{ range (where .Site.Pages "Type" "category") }}
         {{ if eq $curSection .Section }}
             {{ if eq (len .Pages) 0 }}
