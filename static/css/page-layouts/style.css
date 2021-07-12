@@ -5,11 +5,16 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;    
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     justify-content: start;
     font-family: var(--body-font);
+    min-height: calc(100vh - 68px);
+    height: fit-content;
+    position: relative;
+    left: 267px;
+    top: 68px;
 }
 .footer-root {
     display: flex;
@@ -60,11 +65,7 @@
     justify-content: center;
     width: calc(100vw - 267px);
     background-color: var(--grey-head);
-    position: relative;
-    left: 267px;
-    top: 68px;
-    z-index: -1;
-    min-height: calc(100vh - 68px);
+   
 
 }
 
