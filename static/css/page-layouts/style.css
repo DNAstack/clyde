@@ -61,7 +61,6 @@
     display: -ms-flexbox;
     display: flex;    
     flex-direction: column;
-    flex: 1 1 0px;
     justify-content: center;
     width: calc(100vw - 267px);
     background-color: var(--grey-head);
@@ -240,10 +239,10 @@
 
     .content{
         width: 100vw;
+        left: 0;
     }
-
-    .footer-nav{
-        display: none;
+    .text-card {
+        padding: 20px 32px;
     }
 
 }

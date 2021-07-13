@@ -71,7 +71,22 @@ $('#search-input-modal').on('shown.bs.modal', function () {
     $(".modal-backdrop").not(':first').remove();
   }
 
+  if (window.innerWidth < 1000) {
+    $('#search-input-div').toggle();
+    $('.content-header-nav').toggle();
+    $("#search-btn-mobile").toggle();
+  }
+
 })
+
+$('#search-input-modal').on('hidden.bs.modal', function () {
+    if (window.innerWidth < 1000) {
+        $('#search-input-div').toggle();
+        $('.content-header-nav').toggle();
+        $("#search-btn-mobile").toggle();
+      }
+    })
+
 
 window.onload = function() {
 
