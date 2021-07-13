@@ -66,6 +66,7 @@
     justify-content: center;
     width: calc(100vw - 267px);
     background-color: var(--grey-head);
+    height: fit-content;
    
 
 }
@@ -82,6 +83,7 @@
     justify-content: start;
     background-color: var(--primary);
     height: fit-content;
+
     
 }
 
