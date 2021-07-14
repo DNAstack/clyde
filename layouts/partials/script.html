@@ -1,9 +1,15 @@
 <script src="/js/jquery-3.5.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        if($(document).scrollTop() > 0) {
-            $(document).scrollTop($(document).scrollTop() - $('.content-header').height())
+    // The function actually applying the offset
+    function offsetAnchor() {
+        if(location.hash.length !== 0) {
+            window.scrollTo(window.scrollX, window.scrollY - $(".content-header").height());
         }
-    })
+    }
+
+    // This will capture hash changes while on the page
+    window.addEventListener("hashchange", offsetAnchor);
+
+    window.setTimeout(offsetAnchor, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
 </script>
