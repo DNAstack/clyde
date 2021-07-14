@@ -11,7 +11,8 @@
     width: 100vw;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-primary);
-    height: fit-content(44px);
+    height: fit-content;
+    min-height: 68px;
     align-items: center;
     position: fixed;
     left: 0;
