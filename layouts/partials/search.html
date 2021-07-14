@@ -6,6 +6,7 @@
 
 // define globale variables
 var idx, searchInput, searchResults = null
+var isMobile, openMobile = false
 var documents = []
 
 function renderSearchResults(results){
@@ -71,21 +72,25 @@ $('#search-input-modal').on('shown.bs.modal', function () {
     $(".modal-backdrop").not(':first').remove();
   }
 
-  if (window.innerWidth < 1000) {
+  if (isMobile && !openMobile) {
+    console.log("mobile, show")
     $('#search-input-div').toggle();
     $('.content-header-nav').toggle();
     $("#search-btn-mobile").toggle();
     $("#search-button").toggle();
+    openMobile = true
   }
 
 })
 
 $('#search-input-modal').on('hidden.bs.modal', function () {
-    if (window.innerWidth < 1000) {
+    if (isMobile && openMobile) {
+        console.log("mobile hide")
         $('#search-input-div').toggle();
         $('.content-header-nav').toggle();
         $("#search-btn-mobile").toggle();
         $("#search-button").toggle();
+        openMobile = false
       }
     })
 
@@ -95,6 +100,11 @@ window.onload = function() {
     // get dom elements
     searchInput = document.getElementById('search-input')
     searchResults = document.getElementById('search-results')
+    
+    //determine if the user is on mobile by their screen width
+    if (window.innerWidth < 1000) {
+        isMobile = true
+    }
 
     // request and index documents
     fetch('/index.json', {
