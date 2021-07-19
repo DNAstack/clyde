@@ -11,8 +11,8 @@
     width: 100vw;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-primary);
-    height: fit-content;
-    min-height: 68px;
+    height: 56px;
+    min-height: 56px;
     align-items: center;
     position: fixed;
     left: 0;
@@ -280,7 +280,7 @@
     display: none;
     position: fixed;
     z-index: 1060;
-    top: 16px;
+    top: 12px;
     left: 60px;
     width: 32px;
     font-size: 32px;
@@ -289,7 +289,7 @@
     border-radius: 16px;
     background-color: transparent;
     padding: 0px;
-    margin: 0px 8px;
+    margin: 0 8px;
     color: var(--grey600);
 }
 
