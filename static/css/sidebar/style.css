@@ -146,7 +146,6 @@
 .nav-toc a {
     color: #495567;
 }
-
 .nav-toc a:hover, .sidebar-h2:hover {
     color: var(--sidebar-hover);
     text-decoration: none;

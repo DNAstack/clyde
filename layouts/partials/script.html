@@ -1,15 +1,30 @@
+{{ $curUID := .File.UniqueID }}
 <script src="/js/jquery-3.5.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+    currentLocation = ""
     // The function actually applying the offset
     function offsetAnchor() {
-        if(location.hash.length !== 0) {
-            window.scrollTo(window.scrollX, window.scrollY - $(".content-header").height());
+        if(location.hash.length !== 0 && currentLocation != location.hash) {
+            window.scrollTo(window.scrollX, window.scrollY - $(".content-header").height() - 36);
+            currentLocation = location.hash
         }
     }
 
     // This will capture hash changes while on the page
     window.addEventListener("hashchange", offsetAnchor);
+
+    // This is to disable the header from going out of frame on the second click of a
+    // anchor link
+    $(".nav-toc a").on('click', function(e) {
+        e = e || window.event
+        target = e.target
+        target_location = target.href.substr(target.href.indexOf('#'))
+        if (target_location == location.hash) {
+            e.preventDefault();
+        }
+        
+    })
 
     window.setTimeout(offsetAnchor, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
 </script>
