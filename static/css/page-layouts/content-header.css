@@ -87,6 +87,7 @@
     background-color: var(--primary);
     border-radius: 3px;
     flex-shrink: 1;
+    border: none;
 }
 
 #search-button:hover{
