@@ -194,7 +194,7 @@
     border: 1px solid var(--grey-head);
     border-radius: 0px 0px 3px 3px;
     position: fixed;
-    top: 52px;
+    top: 48px;
     bottom: auto;
     right: auto;
     min-width: min(500px,100vw - 660px);
