@@ -157,6 +157,8 @@
     min-width: min(500px,100vw - 660px);
     max-width: min(500px,100vw - 660px);
     left: 0;
+    border: none;
+    border-radius: 3px;
 }
 
 .modal-dialog {
@@ -174,6 +176,7 @@
     outline: none;
     box-shadow: none;
     -webkit-appearance:none;
+    border-radius: 3px;
 }
 
 #search-input:focus {
@@ -314,6 +317,7 @@
         width: calc(100vw - 102px);
         min-height: 48px;
         order: 1;
+        border: none;
     }
     #search-results {
         position: fixed;
