@@ -146,6 +146,7 @@
 .code-block {
     padding: 1rem 1rem 0rem 1rem;
     background-color: var(--grey200);
+    margin-bottom: 1em;
 }
 
 .highlight code{
