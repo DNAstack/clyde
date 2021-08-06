@@ -19,8 +19,8 @@
     $(".nav-toc a").on('click', function(e) {
         e = e || window.event
         target = e.target
-        target_location = target.href.substr(target.href.indexOf('#'))
-        if (target_location == location.hash) {
+        target_location_hash = target.href.substr(target.href.indexOf('#'))
+        if (target_location_hash == location.hash && target.href == location.href) {
             e.preventDefault();
         }
         
