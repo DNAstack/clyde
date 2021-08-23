@@ -71,6 +71,12 @@
 
 }
 
+.text-area h6 {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
 .text-card {
     padding: 32px 72px 32px 72px;
     margin: 0px;
@@ -103,6 +109,7 @@
 .content-area .h3{
     font-size: 20px !important;
 }
+
 
 .content-area {
     display: -webkit-box;
@@ -147,6 +154,28 @@
     padding: 1rem 1rem 0rem 1rem;
     background-color: var(--grey200);
     margin-bottom: 1em;
+}
+
+.cli-command {
+    margin: 2em 0;
+}
+
+.cli-command .code-block {
+    margin-bottom: 1em;
+}
+.cli-command table {
+    margin: 1em 0;
+    width: 100%;
+
+}
+
+.cli-command td, .cli-command th {
+    padding: 0.5em 1em;
+}
+
+.cli-command th {
+
+    background-color: var(--grey200);
 }
 
 .highlight code{
