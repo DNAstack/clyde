@@ -6,8 +6,17 @@
     display: -ms-flexbox;
     display: flex;    
     flex-direction: column;
-    justify-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
     font-family: var(--body-font);
+    min-height: calc(100vh - 68px);
+    height: fit-content;
+    position: relative;
+    left: 267px;
+    top: 56px;
+    background-color: var(--grey-head);
+   
 }
 .footer-root {
     display: flex;
@@ -47,7 +56,23 @@
 
 .text-area{
     overflow-y: scroll;
-    padding: 32px 72px 0px 72px;
+    padding: 32px 32px 0px 32px;
+    margin: 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100vw - 267px);
+    background-color: var(--grey-head);
+    height: fit-content;
+   
+
+}
+
+.text-card {
+    padding: 32px 72px 32px 72px;
     margin: 0px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -56,8 +81,10 @@
     flex-direction: column;
     flex: 1 1 0px;
     justify-content: start;
-    width: calc(100vw - 260px);
-    height: auto;
+    background-color: var(--primary);
+    height: fit-content;
+
+    
 }
 
 
@@ -118,6 +145,29 @@
 
 .code-block {
     padding: 1rem 1rem 0rem 1rem;
+    background-color: var(--grey200);
+    margin-bottom: 1em;
+}
+
+.cli-command {
+    margin: 2em 0;
+}
+
+.cli-command .code-block {
+    margin-bottom: 1em;
+}
+.cli-command table {
+    margin: 1em 0;
+    width: 100%;
+
+}
+
+.cli-command td, .cli-command th {
+    padding: 0.5em 1em;
+}
+
+.cli-command th {
+
     background-color: var(--grey200);
 }
 
@@ -204,6 +254,7 @@
     .text-area{
         padding: 7px 14px;
         width: 100%;
+        left: 0;
 
     }
 
@@ -215,10 +266,10 @@
 
     .content{
         width: 100vw;
+        left: 0;
     }
-
-    .footer-nav{
-        display: none;
+    .text-card {
+        padding: 20px 32px;
     }
 
 }
