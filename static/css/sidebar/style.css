@@ -2,17 +2,17 @@
     color: inherit;
 }
 
-.sidebar-h1 { 
+.sidebar-h1 {
     padding: 0 24px 0 0px !important;
     font-family: var(--heading-font);
     font-style: normal;
     font-weight: 500;
-    font-size: 16px; 
+    font-size: 16px;
     line-height: 140%;
     margin: 0px;
     color: inherit;
 }
-.sidebar-h2 {  
+.sidebar-h2 {
     color: inherit;
 }
 .sidebar-h2 {
@@ -38,13 +38,13 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;    
+    display: flex;
     flex-shrink: 0;
     height: 100%;
 }
 
 .site-title {
-    margin-top: 10px;   
+    margin-top: 10px;
     margin-right: 20px;
     margin-bottom: 36px;
     margin-left: 24px;
@@ -86,13 +86,13 @@
     padding-left: 24px;
     padding-top: 18px;
     padding-bottom: 18px;
-}  
+}
 
 .nav-list{
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 .nav-link{
-    margin-left: 0px; 
+    margin-left: 0px;
     padding: 0px 0px !important;
     display: flex !important;
     align-items: center;
@@ -113,12 +113,12 @@
 
 .nav-highlight{
     color: var(--sidebar-primary);
-}   
+}
 
 #logo{
     margin-top: 24px;
     margin-left: 20px;
-    width: 32px;
+    /*width: 32px;*/
     margin-bottom: 44px;
 }
 #logohide{
@@ -126,7 +126,7 @@
 }
 .nav-highlight{
     color: var(--sidebar-primary) !important;
-    
+
 }
 
 .nav-highlight.mainitem{
@@ -149,7 +149,7 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;  
+    display: flex;
     flex-direction: row;
     justify-content: start;
     border: none;
@@ -167,7 +167,7 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;  
+    display: flex;
     flex-direction: column;
     padding: 16px 16px;
 }
