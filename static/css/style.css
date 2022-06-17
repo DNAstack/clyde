@@ -9,6 +9,10 @@ body{
     right: 0;
 }
 
+hr {
+    width: 100%;
+}
+
 h1 {
     font-family: var(--heading-font);
     font-style: normal;
@@ -211,4 +215,31 @@ th {
 
 .highlight code p {
     font-family: Source Code Pro;
+}
+
+.text-area > blockquote {
+    border-left: 2px solid #E9EBEF;
+    background-color: #F3F7FD;
+    padding: 1rem;
+}
+
+.text-area > blockquote strong {
+    font-weight: bold;
+}
+
+.text-area > blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+.text-area .code-block {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+.text-area .code-block blockquote,
+.text-area .code-block .highlight,
+.text-area .code-block pre {
+    padding: 0;
+    margin: 0;
+    font-size: 0.80rem;
 }
