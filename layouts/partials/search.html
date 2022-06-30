@@ -1,6 +1,11 @@
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
-    document.getElementById("scrollto").scrollIntoView(true);
+    window.addEventListener('load', () => {
+        let elem = document.getElementById("scrollto");
+        if (elem !== null) {
+            elem.scrollIntoView(true);
+        }
+    });
 </script>
 <script type="text/javascript">
 
@@ -22,7 +27,7 @@ function renderSearchResults(results){
 
         // append results
         results.forEach(result => {
-        
+
             // create result item
             var article = document.createElement('article')
             var uri = result.ref.replace("/index.json","")
@@ -45,10 +50,10 @@ function registerSearchHandler() {
 
         // remove search results if the user empties the search input field
         if (searchInput.value == '') {
-            
+
             searchResults.innerHTML = ''
         } else {
-            
+
             // get input value
             var query = event.target.value
 
